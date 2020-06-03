@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+
+</head>
+
+<body ng-app="CalculatorApp" ng-controller="CalculatorController">
+  <h2>ショートスリーパー診断</h2>
+     <br>
+  <div>
+  <form name="form1">
+  	<strong>その① 旅行が好きかどうか?</strong> 
+		<input type="radio" name="travel" value="travel_yes">YES
+		<input type="radio" name="travel" value="trave_no">NO
+     <br><br>
+  	<strong>その② 漫画好きかどうか?</strong> 
+		<input type="radio" name="manga" value="manga_yes">YES
+		<input type="radio" name="manga" value="manga_no">NO
+     <br><br>
+     
+  	<strong>その③ 痩せたいかどうか?</strong> 
+		<input type="radio" name="diet" value="diet_yes">YES
+		<input type="radio" name="diet" value="diet_no">NO
+     <br><br>
+  	<strong>その④ 筋トレが好きかどうか?</strong>
+		<input type="radio" name="train" value="train_yes">YES
+		<input type="radio" name="train" value="train_no">NO
+     <br><br>     
+
+  	<strong>その⑤ 映画好きかどうか?</strong>
+		<input type="radio" name="movie" value="movie_yes">YES
+		<input type="radio" name="movie" value="movie_no">NO
+     <br><br>
+  	<strong>その⑥ ドラマ好きかどうか?</strong>
+		<input type="radio" name="dorama" value="dorama_yes">YES
+		<input type="radio" name="dorama" value="dorama_no">NO
+     <br><br>
+  	<strong>その⑦ 資格試験を考えているかどうか?</strong>
+		<input type="radio" name="study" value="study_yes">YES
+		<input type="radio" name="study" value="study_no">NO
+     <br><br>
+     
+  	<strong>その⑧ フリーターかどうか?</strong> 
+		<input type="radio" name="free" value="free_yes">YES
+		<input type="radio" name="free" value="free_no">NO
+     <br><br>
+
+	<input type="button" value="診断結果" onclick="clickBtn1()"/>
+	<br>
+	<p id="text2"></span></p>
+	</form>
+	
+<script>
+function clickBtn1(){
+	let str = "";
+	var num = 0;
+	var travelcheck = document.form1.travel[0].checked;  //ラジオボタンrbtnの１つ目（rbtn[0]）の状態を取得
+		//yesの内容がtrue（ボタンが押されている状態）かどうかで条件分岐
+		if (travelcheck) { //tureの場合
+			num = num+1;
+		}
+
+	var mangacheck = document.form1.manga[0].checked;  //ラジオボタンrbtnの１つ目（rbtn[0]）の状態を取得
+		//yesの内容がtrue（ボタンが押されている状態）かどうかで条件分岐
+		if (mangacheck) { //tureの場合
+			num = num+1;
+		}
+
+	var dietcheck = document.form1.diet[0].checked;  //ラジオボタンrbtnの１つ目（rbtn[0]）の状態を取得
+		//yesの内容がtrue（ボタンが押されている状態）かどうかで条件分岐
+		if (dietcheck) { //tureの場合
+			num = num+1;
+		}
+
+
+	var traincheck = document.form1.train[0].checked;  //ラジオボタンrbtnの１つ目（rbtn[0]）の状態を取得
+		//yesの内容がtrue（ボタンが押されている状態）かどうかで条件分岐
+		if (traincheck) { //tureの場合
+			num = num+1;
+		}
+
+
+	var moviecheck = document.form1.movie[0].checked;  //ラジオボタンrbtnの１つ目（rbtn[0]）の状態を取得
+		//yesの内容がtrue（ボタンが押されている状態）かどうかで条件分岐
+		if (moviecheck) { //tureの場合
+			num = num+1;
+		}
+
+	var doramacheck = document.form1.dorama[0].checked;  //ラジオボタンrbtnの１つ目（rbtn[0]）の状態を取得
+		//yesの内容がtrue（ボタンが押されている状態）かどうかで条件分岐
+		if (doramacheck) { //tureの場合
+			num = num+1;
+		}
+
+	var studycheck = document.form1.study[0].checked;  //ラジオボタンrbtnの１つ目（rbtn[0]）の状態を取得
+		//yesの内容がtrue（ボタンが押されている状態）かどうかで条件分岐
+		if (studycheck) { //tureの場合
+			num = num+1;
+		}
+
+	var freecheck = document.form1.free[0].checked;  //ラジオボタンrbtnの１つ目（rbtn[0]）の状態を取得
+		//yesの内容がtrue（ボタンが押されている状態）かどうかで条件分岐
+		if (freecheck) { //tureの場合
+			num = num+1;
+		}
+
+	console.log("test");
+	console.log(num);
+
+	if(num === 0) {
+		str = "ショートスリーパ診断結果は0%!!あなたはショートスリーパーに向いていないです。"
+	} else if(num === 1) {
+		str ="ショートスリーパ診断結果は12%！！あなたはショートスリーパーにはあまり向いていないです。"
+	} else if(num === 2) {
+		str ="ショートスリーパ診断結果は25%!!あなたはショートスリーパーにはあまり向いていないです。"
+	} else if(num === 3) {
+		str ="ショートスリーパ診断結果は37%！！あなたはショートスリーパーにはあまり向いていないです。"	
+	} else if(num === 4) {
+		str ="ショートスリーパ診断結果は50%！！あなたはショートスリーパーにはやや向いています。"
+	} else if(num === 5) {
+		str ="ショートスリーパ診断結果は62%！！あなたはショートスリーパーにはやや向いています。"
+	} else if(num === 6) {
+		str ="ショートスリーパ診断結果は75%！！あなたはショートスリーパーには向いています。"
+	} else if(num === 7) {
+		str ="ショートスリーパ診断結果は87%！！あなたはショートスリーパーには向いています。"
+	} else if(num === 8) {
+		str ="ショートスリーパ診断結果は100%！！あなたはショートスリーパーには向いています。"
+	}
+	
+	document.getElementById("text2").innerHTML = str;
+
+	console.log("test");
+	console.log(num);
+}
+</script>
+
+  </div>
+ 
+</body>
+</html>
